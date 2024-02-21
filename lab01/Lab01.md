@@ -159,6 +159,63 @@ You can write the code in it, and execute it by running `tsx lab01.ts` in the Gi
 6. Define 2 variables with the explicit type of `number`. Assign values to each of them. Print the sum of the 2 variables, the difference, and the result of the division.
 7. Define 2 variables, the first one with the explicit type `number` and the second one with type `string`. Assign any appropriate values to them. Print the result of adding them up. What happens, and can you guess why?
 
+
+## Variable lifetimes
+
+A program is a set of instructions that, normally, is executed in order from top to bottom. Thik of this example:
+
+```
+const a = 5;
+const b = 7;
+console.log(a + b);
+```
+
+The order in which the instructions are executed is this:
+
+* Declare a variable called `a` and assign it the value 5
+* Declare another variable called `b`, and assign it the value 7
+* Output the value of `a + b`
+
+What would happen if we were to print the value of `a + b` before declaring and initializing them? Well, we would get an error, because at the time of computing the sum, the variables are not defined. So, we can say that
+
+> The lifetime of a variable starts when it is declared.
+
+### Blocks
+
+> A block is a section of code delimited by curly brackets. It is required for certain types of instructions
+
+An example of block: 
+
+```
+{
+    const a = 5;
+    console.log(a);
+}
+```
+
+> A variable declared within a block only lives while inside that block. Variables declared outside blocks are visible to inner blocks.
+
+To understand this better, let's look at this example:
+```
+{
+    console.log(a);
+
+    let b = 5;
+    console.log(b);
+
+    {
+        let c = 5;
+    }
+
+    console.log(c);
+}
+```
+* `a` is visible when printing, because the print is in an _inner block_ from where it was defined
+* `b` is visible when printing, because the print is in the _same block_ in which it was defined
+* `c` is **not visible** when printing (and the print will throw an error), because it's not in the same scope as when it was defined
+
+> You cannot declare a new variable with the same name as a living, existing one. In other words, you cannot have two variables with the same name in the same scope.
+
 ## Extension: ternary operator
 
 The ternary operator is a bit weird to understand at first, but it's a powerful tool that's used quite frequently. It consists of:
