@@ -113,7 +113,7 @@ console.log(array[1]); // 2
 > **Array positions start at 0.**
 
 
-We can add elments to arrays:
+We can add elements to arrays:
 ```
 const array = [1, 2];
 
@@ -156,7 +156,7 @@ const array = Array<number>(10);
 2. Write a function that returns the factorial of a number, e.g:
 5! = 1 * 2 * 3 * 4 * 5
 3. Write a function that checks if a number is prime
-4. Write a function that checks if a string is a palyndrome
+4. Write a function that checks if a string is a palindrome
 5. Write a function that reverses a string
 6. Write a function that calculates the sum of 2 numbers, and another one for the difference of 2 numbers. Write another function that takes as parameter 2 numbers and an operation, and applies the operation on the 2 numbers.
 7. Sort an array of numbers. Hint: you can use `array.sort()` for that. Test it with an array of 20 random numbers between 1 and 100:
