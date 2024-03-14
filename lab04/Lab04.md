@@ -1,8 +1,8 @@
 # Object-Oriented Programming (I)
 
-So far, we have only used primitive data types that exist in typescript. We've had a taste of them in the previous lab, with using `Array` and `String`.
+So far, we have only used primitive data types that exist in typescript, but there's so much more than that.
 
-But now it's time to think more deeply about data types.
+We've had a taste of complex data types in the previous lab, with using `Array` and `String`. But now it's time to think more deeply about them.
 
 ## Objects
 
@@ -62,7 +62,7 @@ class MyCustomDataType {
 const x = new MyCustomDataType();
 ```
 
-We can now access the property using the dot operator: `x.numberProperty`. Similarly with objects, we can assign any data type to them.
+We can now access the property using the dot operator: `x.numberProperty`. Similarly with objects, we can have properties of any data type.
 
 ### Methods
 
@@ -85,7 +85,7 @@ let x: MyCustomDataType = new MyCustomDataType();
 x.printProperty(); // will print undefined
 ```
 
-Methods can follow the usual function declaration, except we don't need to add the `function` keyword. We can also access them using the dot operator, add parameters to them, and otherwise work as regular functions.
+Methods can follow the usual function declaration, except we don't need to add the `function` keyword. We can also access them using the dot operator, add parameters to them, and they otherwise work as regular functions.
 
 ### Constructors
 
